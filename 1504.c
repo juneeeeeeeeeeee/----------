@@ -4,18 +4,22 @@
 #define UNDEFINED_NUM -1
 #define INF 2147483647
 int **array;
+int n;
 int dijkstra(int r1, int r2)
 {
-
+  int *dist = (int *)malloc(sizeof(int) * n);
+  int *queue = (int *)malloc(sizeof(int) * (n+1));
+  memset(dist, INF, sizeof(int) * n);
+  dist[r1] = 0;
 }
 int main(void)
 {
-  int n, e;
+  int e;
   scanf("%d %d", &n, &e);
   array = (int **)malloc(sizeof(int *) * n);
   for (int i = 0; i <= n - 1;i++)
   {
-    memset(array[i], 0, sizeof(int) * n);
+    memset(array[i], INF, sizeof(int) * n);
   }
   for (int i = 0; i <= e - 1;i++)
   {
